@@ -120,7 +120,7 @@ footer a:hover {
 
 @media (min-width: 768px) {
     main>section {
-        height: 55 0px;
+        height: 550px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
