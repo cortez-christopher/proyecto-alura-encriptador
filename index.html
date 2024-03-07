@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="icon" href="img/Logo-icono.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <div class="container col-12 pt-4">
+        <img class="" src="img/Logo.webp" alt="Logo Alura">
+    </div>
+    <main class="container d-flex flex-column align-content-md-around flex-xl-row gap-xl-5 mt-4 px-xl-0">
+        <section class="container encriptador px-0 px-xl-0">
+            <textarea id="texto-encriptado" class="texto-encriptado col-12 col-md-12 bg-transparent fs-2" name="texto"
+                placeholder="Ingrese el texto aqui" autofocus></textarea>
+            <div class="info">
+                <span class="d-flex gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                    </svg>
+                    <p id="error" class="detalles my-2 fs-8">
+                        Solo letras minúsculas y sin acentos
+                    </p>
+                </span>
+                <div class="buttons d-flex flex-column flex-md-row gap-4">
+                    <button onclick="btnEncriptar()" class="py-3 border-1 fs-6 rounded-4 py-md-3 w-100">
+                        Encriptar
+                    </button>
+                    <button onclick="btnDesencriptar()" class="py-3 border-1 fs-6 rounded-4 w-100">
+                        Desencriptar
+                    </button>
+                </div>
+            </div>
+        </section>
+        <aside id="resultado" class="bg-white px-5 py-4 mt-5 mb-3 mt-xl-0 mb-xl-0 text-center rounded-5 gap-4">
+            <textarea id="texto-copiado" class="gestor-mensaje col-12 col-xl-3 fs-2 w-100" readonly></textarea>
+            <img id="imagen" src="img/Muñeco.webp" alt="Personaje buscando">
+            <h2 id="ningun" class="ningun fs-2 fw-bold">
+                Ningún mensaje fue encontrado
+            </h2>
+            <p class="instruccion fs-6">
+                Ingresa el texto que desees encriptar o desencriptar.
+            </p>
+
+            <button id="copiar" onclick="copy()" class="copiar py-3 border-1 fs-6 rounded-4 w-100 mt-4">
+                Copiar
+            </button>
+        </aside>
+    </main>
+    <footer class="d-flex justify-content-center align-items-center text-light">
+
+
+        <a href="https://www.linkedin.com/in/cortez-christopher/" target="_blank">
+            <i class="fa-brands fa-linkedin fa-2xl"></i>
+        </a>
+
+        <a href="https://github.com/cortez-christopher" target="_blank">
+            <i class="fa-brands fa-github fa-2xl"></i>
+        </a>
+        <p class="m-0 fw-normal">
+            &copy ALURA - ONE G6 | Christopher Cortez
+        </p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

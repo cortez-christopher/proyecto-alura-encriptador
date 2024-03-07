@@ -1,0 +1,165 @@
+body {
+    background-color: #f3f5fc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.bi-exclamation-circle-fill {
+    fill: #495057;
+}
+
+
+
+#texto-encriptado,
+.gestor-mensaje {
+    max-height: 240px;
+    color: #0a3871;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+#texto-encriptado::placeholder {
+    color: #0a3871;
+}
+
+.info div button:nth-child(1) {
+    color: #fff;
+    background-color: #0a3871;
+    border: 1px solid #0a3871;
+}
+
+.info div button:nth-child(1):hover {
+    background-color: #082b55;
+}
+
+.info div button:nth-child(2) {
+    color: #0a3871;
+    background: transparent;
+    border: 1px solid #0a3871;
+}
+
+.info div button:nth-child(2):hover {
+    background-color: #d8dfe8;
+}
+
+.info>span {
+    display: flex;
+    align-items: center;
+}
+
+span>p {
+    color: #495057;
+    font-size: 12px;
+}
+
+.info>span>img {
+    height: 20px;
+}
+
+aside {
+    box-shadow: 7px 8px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+aside .gestor-mensaje {
+    display: none;
+}
+
+aside #copiar {
+    display: none;
+}
+
+aside img {
+    display: none;
+}
+
+aside button {
+    color: #0a3871;
+    background: transparent;
+    border: 1px solid #0a3871;
+}
+
+aside button:hover {
+    background-color: #d8dfe8;
+}
+
+footer {
+    height: 60px;
+    background-color: #082b55;
+    gap: 20px;
+}
+
+footer a {
+    color: #f3f5fc;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+footer a:hover {
+    color: #d8dfe8;
+    transform: scale(1.2);
+}
+
+@media (min-width: 0px) {
+
+    main {
+        flex-grow: 1;
+    }
+
+    #texto-encriptado,
+    .gestor-mensaje {
+        min-height: 18vh;
+    }
+
+}
+
+@media (min-width: 768px) {
+    main>section {
+        height: 55 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #texto-encriptado {
+        min-height: 350px;
+    }
+
+    .gestor-mensaje {
+        min-height: 200px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    main>section {
+        height: 700px;
+    }
+
+    #texto-encriptado,
+    .gestor-mensaje {
+        min-height: 600px;
+    }
+
+    aside {
+        top: -30px;
+        position: relative;
+        min-height: 730px;
+        min-width: 432px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    aside img {
+        display: flex;
+    }
+
+}
+
